@@ -1,38 +1,115 @@
-.App {
+/* src/App.css */
+
+/* --- Google Font Import --- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400&display=swap');
+
+/* --- Theme Variables --- */
+:root {
+  --background-dark: #1a1a1a;
+  --background-light: #2c2c2c;
+  --text-primary: #e0e0e0;
+  --text-muted: #888;
+  --accent-color: #c5b358; /* Antique Gold */
+  --border-color: #444;
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Roboto', sans-serif;
+}
+
+/* --- Base Styles --- */
+body {
+  background-color: var(--background-dark);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+}
+
+/* --- Navbar --- */
+.navbar-vintage {
+  background-color: transparent !important;
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 0;
+}
+
+.navbar-vintage .navbar-brand,
+.navbar-vintage .nav-link {
+  font-family: var(--font-heading);
+  color: var(--accent-color) !important;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.navbar-vintage .nav-link:hover {
+  color: var(--text-primary) !important;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+  text-align: center;
+  padding: 8rem 0;
+  background: linear-gradient(rgba(26, 26, 26, 0.8), rgba(26, 26, 26, 0.8));
+  background-size: cover;
+}
+
+.hero-section h1 {
+  font-family: var(--font-heading);
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--accent-color);
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  max-width: 600px;
+  margin: 1rem auto;
+}
+
+/* --- Paradigm Card --- */
+.paradigm-card-link {
+  text-decoration: none;
+}
+
+.paradigm-card {
+  background-color: var(--background-light);
+  border: 1px solid var(--border-color);
+  border-radius: 0; /* Sharp corners for a classic look */
+  height: 100%;
+  color: var(--text-primary);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  padding: 1.5rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.paradigm-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent-color);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.paradigm-card .card-title {
+  font-family: var(--font-heading);
+  color: var(--accent-color);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.paradigm-card .card-text {
+  color: var(--text-primary);
+  font-weight: 300;
+  line-height: 1.6;
 }
 
-.App-link {
-  color: #61dafb;
+.paradigm-card .card-meta {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-top: 1.5rem;
+  font-style: italic;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.paradigm-card .card-count {
+  font-weight: bold;
+  color: var(--accent-color);
+  border: 1px solid var(--border-color);
+  padding: 0.25rem 0.75rem;
+  display: inline-block;
+  margin-top: 1rem;
 }
