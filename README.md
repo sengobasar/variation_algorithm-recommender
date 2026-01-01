@@ -269,13 +269,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-For questions, issues, or contributions:
-
-- 📧 Email: [your-email@example.com]
-- 🐛 Issues: [GitHub Issues](https://github.com/your-repo/issues)
-- 📖 Documentation: [Research Paper](./Research_Paper_Algorithm_Recommender_System.md)
-
----
 
 **Made with ❤️ for the ML community**
 
